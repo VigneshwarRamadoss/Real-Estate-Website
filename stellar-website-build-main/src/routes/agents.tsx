@@ -61,40 +61,42 @@ function Page() {
         italic="real expertise."
         description="Every advisor on LuxeHaven is RERA-registered, performance-tracked, and personally vetted by our team."
       />
-      <section className="container-edge pb-32 grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-line border border-line rounded-2xl overflow-hidden">
-        {AGENTS.map((a, i) => (
-          <motion.div
-            key={a.name}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.55, delay: i * 0.05 }}
-            className="bg-surface p-8 group cursor-pointer transition hover:bg-line-soft/50"
-          >
-            <div className="flex items-center gap-4">
-              <div className="grid h-14 w-14 place-items-center rounded-full bg-ink text-surface text-base font-semibold">
-                {a.initials}
-              </div>
-              <div>
-                <div className="text-lg font-semibold tracking-tight">{a.name}</div>
-                <div className="text-[13px] text-muted-foreground">
-                  {a.city} · {a.exp}
+      <section className="container-edge pb-32">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-line border border-line rounded-2xl overflow-hidden">
+          {AGENTS.map((a, i) => (
+            <motion.div
+              key={a.name}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.55, delay: i * 0.05 }}
+              className="bg-surface p-8 group cursor-pointer transition hover:bg-line-soft/50"
+            >
+              <div className="flex items-center gap-4">
+                <div className="grid h-14 w-14 place-items-center rounded-full bg-ink text-surface text-base font-semibold">
+                  {a.initials}
+                </div>
+                <div>
+                  <div className="text-lg font-semibold tracking-tight">{a.name}</div>
+                  <div className="text-[13px] text-muted-foreground">
+                    {a.city} · {a.exp}
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="mt-6 flex items-center gap-1 text-[13px]">
-              <Star className="h-3.5 w-3.5 fill-ink text-ink" />
-              <Star className="h-3.5 w-3.5 fill-ink text-ink" />
-              <Star className="h-3.5 w-3.5 fill-ink text-ink" />
-              <Star className="h-3.5 w-3.5 fill-ink text-ink" />
-              <Star className="h-3.5 w-3.5 fill-ink text-ink" />
-              <span className="ml-2 text-muted-foreground">{a.deals} closed deals</span>
-            </div>
-            <div className="mt-6 inline-block rounded-full border border-line px-3 py-1 text-[11px] uppercase tracking-wider">
-              {a.spec}
-            </div>
-          </motion.div>
-        ))}
+              <div className="mt-6 flex items-center gap-1 text-[13px]">
+                <Star className="h-3.5 w-3.5 fill-ink text-ink" />
+                <Star className="h-3.5 w-3.5 fill-ink text-ink" />
+                <Star className="h-3.5 w-3.5 fill-ink text-ink" />
+                <Star className="h-3.5 w-3.5 fill-ink text-ink" />
+                <Star className="h-3.5 w-3.5 fill-ink text-ink" />
+                <span className="ml-2 text-muted-foreground">{a.deals} closed deals</span>
+              </div>
+              <div className="mt-6 inline-block rounded-full border border-line px-3 py-1 text-[11px] uppercase tracking-wider">
+                {a.spec}
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </section>
     </>
   );

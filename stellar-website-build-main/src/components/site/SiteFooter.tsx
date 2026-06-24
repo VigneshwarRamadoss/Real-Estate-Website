@@ -70,7 +70,10 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-20 flex flex-col gap-4 border-t border-line-soft pt-8 text-[12.5px] text-muted-foreground md:flex-row md:items-center md:justify-between">
-          <div>© {new Date().getFullYear()} LuxeHaven Realty Pvt Ltd · RERA Verified</div>
+          <div>
+            © {new Date().getFullYear()} LuxeHaven Realty Pvt Ltd · RERA Verified · Design by The
+            Dot
+          </div>
           <div className="flex gap-6">
             <span>Terms</span>
             <span>Privacy</span>
